@@ -1,16 +1,10 @@
-/* Import Google Font */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); */
-
-/* Font Awesome for Icons */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
 /* Global Styles */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
-  background-color: #000000;
+  background-color: #f4f7fb;
   scroll-behavior: smooth;
 }
 
@@ -18,146 +12,234 @@ html, body {
 .project-section {
   padding: 80px 20px;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(to bottom, #e0f7fa, #80deea); /* Soft gradient background */
+  background-color: #f7f9fc;
+  background: linear-gradient(to bottom, #e0f7fa, #80deea);
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbar in webkit browsers (Chrome, Safari) */
+.project-section::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Title Styling */
 .project-title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 40px;
   color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
   position: relative;
-  animation: titleAnimation 1s ease-out forwards;
+  z-index: 1;
 }
 
-@keyframes titleAnimation {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Animated underline using ::after */
+.project-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
 }
 
+.project-title:hover::after {
+  width: 100%;
+}
+
+/* Carousel Container */
 .carousel-container {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding-right: 20px;
+  gap: 30px;
+  justify-content: center; /* Center the cards horizontally */
+  padding-bottom: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+  scroll-behavior: smooth;
+  justify-content: flex-start; /* Fix issue with mobile scrolling */
+  align-items: center; /* Center vertically (if needed) */
+  flex-wrap: nowrap; /* Prevent wrapping of the cards */
+  width: 100%; /* Ensure the container takes the full width */
 }
 
+/* Remove the scroll bar */
 .carousel-container::-webkit-scrollbar {
-  display: none;
+  height: 6px;
 }
 
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Individual Project Container */
 .project-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: 250px;
+  scroll-snap-align: start;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
-  animation: projectAnimation 1s ease-out forwards;
 }
 
-@keyframes projectAnimation {
-  /* Add your desired animation here */
-}
-
+/* Ensure cards are always centered */
 .project-card {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 1000px;
-  height: 350px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #fff;
-  margin: 0 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
-  width: 45%;
-  height: 100%;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
+/* Title overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.project-container:hover .project-overlay {
+  opacity: 1;
 }
 
 .project-info {
-  padding: 30px;
-  width: 55%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .project-subtitle {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #007bff;
-}
-
-.project-description {
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-  color: #555;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
 }
 
 .project-tech-stack {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #777;
   font-style: italic;
 }
 
-.project-button {
-  padding: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #007bff;
-  background: none;
-  border: none;
-  text-decoration: underline;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s;
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .carousel-container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    overflow-x: scroll; /* Enable horizontal scrolling on mobile */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+    scroll-behavior: smooth;
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  .project-card {
+    flex-direction: column;
+    width: 280px;
+    height: auto;
+    scroll-snap-align: start;
+  }
+
+  .project-info {
+    padding: 10px;
+    display: none;
+  }
+
+  .project-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .project-tech-stack {
+    font-size: 0.8rem;
+  }
+
+  .project-overlay {
+    font-size: 1.2rem;
+    opacity: 0;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  /* Mobile hover project name design */
+  .project-overlay .project-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
 }
 
-.project-button:hover {
-  color: #0056b3;
-  text-decoration: none;
-}
+/* Desktop Styles (Hide project name on hover) */
+@media (min-width: 769px) {
+  .project-overlay {
+    display: none; /* Hide overlay and project name on desktop */
+  }
 
-.project-button i {
-  margin-left: 8px;
-}
-
-/* Icon Styling */
-.project-button i {
-  font-size: 1.1rem; /* Make the icon a bit bigger */
-  transition: transform 0.3s;
-}
-
-.project-button:hover i {
-  transform: translateX(5px); /* Add a little effect to the icon on hover */
+  /* Ensure cards are centered in the middle of the screen */
+  .carousel-container {
+    justify-content: center; /* Ensure the cards stay centered even if new ones are added */
+  }
 }
