@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"; 
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa"; 
 import { SiLeetcode, SiHackerrank } from "react-icons/si"; 
 import { motion } from "framer-motion"; // Import framer-motion
 import "../styles/FollowMe.css";
@@ -55,6 +55,15 @@ const FollowMe = () => {
           className="follow-me-icon leetcode"
         >
           <SiLeetcode className="follow-me-icon-img" />
+        </a>
+        {/* Updated Mail Icon to open Gmail Compose */}
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=chinmayabehera891@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="follow-me-icon mail"
+        >
+          <FaEnvelope className="follow-me-icon-img" />
         </a>
       </div>
     </div>
