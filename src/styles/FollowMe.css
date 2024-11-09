@@ -1,0 +1,125 @@
+/* Main section background animation */
+.follow-me-section {
+    position: relative;
+    padding: 40px 0; /* Reduced padding to make the section smaller */
+    background: linear-gradient(45deg, #05ffff, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite;
+    overflow: hidden;
+    text-align: center; /* Centering the content */
+    border-radius: 15px; /* Added rounded corners for a smoother appearance */
+  }
+  
+  /* Background animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Title Design */
+  .follow-me-title {
+    font-size: 2.2rem; /* Reduced font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Reduced margin */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .follow-me-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e86228;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .follow-me-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Icons and hover effects */
+  .follow-me-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap */
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 400px; /* Constrained width of the icons */
+  }
+  
+  .follow-me-icon {
+    display: inline-block;
+    font-size: 2.5rem; /* Adjusted icon size */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .follow-me-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Icon color customization */
+  .follow-me-icon.linkedin:hover {
+    color: #0077b5;
+    background-color: rgba(0, 119, 181, 0.1);
+  }
+  
+  .follow-me-icon.github:hover {
+    color: #333;
+    background-color: rgba(33, 33, 33, 0.1);
+  }
+  
+  .follow-me-icon.twitter:hover {
+    color: #1da1f2;
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+  
+  .follow-me-icon.hackerrank:hover {
+    color: #00b140;
+    background-color: rgba(0, 177, 64, 0.1);
+  }
+  
+  .follow-me-icon.leetcode:hover {
+    color: #f9a826;
+    background-color: rgba(249, 168, 38, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .follow-me-title {
+      font-size: 2rem; /* Adjusted title font size */
+    }
+  
+    .follow-me-icons {
+      gap: 15px; /* Reduced gap on small screens */
+    }
+  
+    .follow-me-icon {
+      font-size: 2rem; /* Adjusted icon size */
+    }
+  }
+  

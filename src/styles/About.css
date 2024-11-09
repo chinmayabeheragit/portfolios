@@ -1,0 +1,85 @@
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the content vertically */
+    padding: 4rem 1.5rem;
+    background: rgba(59, 130, 246, 0.2);
+    background-image: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(99, 102, 241, 0.9)), url('../assets/my\ pic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    min-height: 100vh;
+    border-radius: 10px;
+}
+
+.text-content {
+    padding: 2rem;
+    text-align: center;
+    /* Optional: Add margins if needed to adjust */
+    margin-top: 0; /* Adjust this if needed */
+}
+
+
+.intro {
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem; /* Additional space below intro */
+}
+
+.name-highlight {
+    color: #ff6f61;
+}
+
+.roles {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+    font-weight: bold;
+    margin-bottom: 2rem; /* Spacing below roles */
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Button Styling */
+.button-group a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+/* Specific Button Colors */
+.hire-me {
+    background-color: #ff6f61;
+    box-shadow: 0px 4px 8px rgba(255, 111, 97, 0.3);
+}
+
+.github {
+    background-color: #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover and Icon Effects */
+.button-group a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}

@@ -1,0 +1,108 @@
+.education-container {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #c5ced7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.8em;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-underline {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0); /* Start with 0 scale for left-to-right animation */
+    transition: transform 0.6s ease-out;
+}
+
+.section-title-container:hover .section-underline {
+    transform: scaleX(1); /* Full width on hover */
+}
+
+/* Education Cards */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 85%;
+    max-width: 1000px;
+}
+
+.education-card {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.education-duration {
+    font-size: 1.2em;
+    color: #444;
+    min-width: 170px;
+    text-align: left;
+    padding-top: 5px;
+    white-space: nowrap;
+    margin-right: 100px;
+}
+
+.education-details {
+    text-align: left;
+}
+
+.degree {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.institution {
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        padding: 50px 15px;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .education-duration {
+        text-align: left;
+        min-width: auto;
+        margin-right: 0;
+    }
+}
