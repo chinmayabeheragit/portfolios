@@ -13,15 +13,14 @@ html, body {
   padding: 80px 20px;
   position: relative;
   background-color: #f7f9fc;
-  background: linear-gradient(to bottom, #e0f7fa, #80deea);
+  background: linear-gradient(to bottom, #a6f1f3, #ffffff);
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
-  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Hide scrollbar in webkit browsers (Chrome, Safari) */
 .project-section::-webkit-scrollbar {
   display: none;
 }
@@ -36,6 +35,7 @@ html, body {
 .project-title {
   text-align: center;
   font-size: 3rem;
+  font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 40px;
   color: #333;
   font-weight: 600;
@@ -46,16 +46,15 @@ html, body {
   z-index: 1;
 }
 
-/* Animated underline using ::after */
 .project-title::after {
   content: '';
   position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -3px;
+  left: 10%;
+  transform: translateX(-10%);
   width: 0;
   height: 4px;
-  background-color: #007bff;
+  background-color: #0e565a;
   transition: width 0.3s ease;
 }
 
@@ -67,19 +66,18 @@ html, body {
 .carousel-container {
   display: flex;
   gap: 30px;
-  justify-content: center; /* Center the cards horizontally */
+  justify-content: center;
   padding-bottom: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  justify-content: flex-start; /* Fix issue with mobile scrolling */
-  align-items: center; /* Center vertically (if needed) */
-  flex-wrap: nowrap; /* Prevent wrapping of the cards */
-  width: 100%; /* Ensure the container takes the full width */
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
-/* Remove the scroll bar */
 .carousel-container::-webkit-scrollbar {
   height: 6px;
 }
@@ -103,7 +101,6 @@ html, body {
   justify-content: center;
 }
 
-/* Ensure cards are always centered */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -114,11 +111,20 @@ html, body {
   overflow: hidden;
   background-color: #fff;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-image {
@@ -132,7 +138,6 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Title overlay */
 .project-overlay {
   position: absolute;
   top: 0;
@@ -164,7 +169,7 @@ html, body {
 .project-subtitle {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #007bff;
+  color: #03312e;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 1.4rem;
@@ -172,7 +177,7 @@ html, body {
 
 .project-tech-stack {
   font-size: 0.9rem;
-  color: #777;
+  color: #31b0b9;
   font-style: italic;
 }
 
@@ -186,17 +191,18 @@ html, body {
     display: flex;
     gap: 20px;
     padding-bottom: 10px;
-    overflow-x: scroll; /* Enable horizontal scrolling on mobile */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    width: 100%; /* Ensure full width on mobile */
+    width: 100%;
   }
 
-  .project-card {
+  .project-container {
     flex-direction: column;
     width: 280px;
     height: auto;
     scroll-snap-align: start;
+    margin-right: 10px; /* Adds spacing between project containers in mobile view */
   }
 
   .project-info {
@@ -222,7 +228,6 @@ html, body {
     opacity: 1;
   }
 
-  /* Mobile hover project name design */
   .project-overlay .project-name {
     font-size: 1.8rem;
     font-weight: 700;
@@ -235,11 +240,10 @@ html, body {
 /* Desktop Styles (Hide project name on hover) */
 @media (min-width: 769px) {
   .project-overlay {
-    display: none; /* Hide overlay and project name on desktop */
+    display: none;
   }
 
-  /* Ensure cards are centered in the middle of the screen */
   .carousel-container {
-    justify-content: center; /* Ensure the cards stay centered even if new ones are added */
+    justify-content: center;
   }
 }

@@ -1,0 +1,187 @@
+/* Main Section */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* font-family: 'Poppins', sans-serif; */
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+.contact-section {
+  padding: 60px 20px;
+  /* background: linear-gradient(135deg, #4e7a7b, #6db7b2, #f0f4f7); */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title Styling */
+/* Title Styling */
+/* Title Styling */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 5.5px;
+  text-align: center; /* Ensures the text is centered */
+  width: 100%; /* Make the width 100% to take full space of its parent */
+  display: inline-block; /* Ensures title is treated as an inline block for proper centering */
+  margin-left: 0; /* Remove left margin */
+  margin-right: 0; /* Remove right margin */
+}
+
+
+/* Overall layout container for form and icons */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* Ensures the form doesn't stretch too wide */
+  /* background: #131414; */
+  padding: 30px;
+  border-radius: 15px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+/* Form Input Styling */
+.contact-form label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: 1.5px solid #014f4c;
+  background: #e4eaeb;
+  color: #000000;
+  font-size: 1.3rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Set width to 100% of the container */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #000000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #4e7a7b;
+  background-color: #89dbdb;
+  box-shadow: 0 0 5px rgba(1, 4, 4, 0.3);
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+/* Button Styling */
+.contact-form button {
+  padding: 15px 0;
+  border: none;
+  border-radius: 60px;
+  background-color: #04a8a8;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #013632;
+  transform: translateY(-3px);
+}
+
+.contact-form button:focus {
+  outline: none;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  flex-direction: column; /* Stacks icons vertically */
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #4e7a7b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Icon Colors */
+.social-icon.linkedin { background-color: #0077b5; }
+.social-icon.github { background-color: #333333; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.hackerrank { background-color: #2ecc71; }
+.social-icon.leetcode { background-color: #f39c12; }
+
+/* Hover Colors for Icons */
+.social-icon.linkedin:hover { background-color: #fbfbfb; }
+.social-icon.github:hover { background-color: #02000b; }
+.social-icon.twitter:hover { background-color: #ffffff; }
+.social-icon.hackerrank:hover { background-color: #000000; }
+.social-icon.leetcode:hover { background-color: #e67e22; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .social-icons {
+    flex-direction: row; /* Stack icons horizontally on small screens */
+    gap: 35px;
+    margin-top: 20px; /* Space between form and social icons on mobile */
+  }
+}

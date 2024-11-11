@@ -6,13 +6,15 @@ import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Skills from '../components/Skills';
 import Certification from '../components/Certification';
-import FollowMe from '../components/FollowMe';
+import Contact from '../components/Contact';
+import AboutMe from '../components/AboutMe';
 
 function Home() {
     return (
         <div className="p-5">
             <section id="about" className="mt-8">
                 <About />
+                <AboutMe />
             </section>
             <section id="projects" className="mt-8">
                 <Project />
@@ -30,7 +32,7 @@ function Home() {
                 <Certification />
             </section>
             <section id="contact" className="mt-8">
-                <FollowMe />
+                <Contact />
             </section>
         </div>
     );

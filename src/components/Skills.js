@@ -30,7 +30,7 @@ const skillsData = [
 const Skills = () => {
     return (
         <section className="skills-container">
-            <h3 className="skills-title">Skills</h3>
+            <h3 className="skills-title">SKILLS</h3>
             <div className="skills-cloud">
                 {skillsData.map((skill, index) => (
                     <motion.div

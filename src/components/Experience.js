@@ -6,18 +6,10 @@ const experienceData = [
     {
         id: 1,
         jobTitle: 'SDE',
-        company: 'HyperNXt Technology | Bengaluru, Karnataka',
-        duration: 'June 2024 - Present',
-        description: "At Hypernxt i contributed to building and optimizing scalable MERN applications, increasing user engagement by 15%. Enhanced backend efficiency by 20% through optimized APIs. Improved DevOps workflows with Docker and Jenkins, achieving a 25% boost in deployment speed. Collaborated across departments in Agile sprints to enhance end-to-end application performance and deliver user-focused features.",
-        skills: ['MERN Stack', 'JavaScript', 'Node.js', 'MongoDB', 'React.js','Python','FastApi','PostgreSql','Redies','NestJs']
-    },
-    {
-        id: 2,
-        jobTitle: 'SDE',
         company: 'Hypersage Technology | Bengaluru, Karnataka',
-        duration: 'December 2023 - June 2024',
-        description: 'Assisted in backend development and API integration, focusing on optimizing database queries and performance.',
-        skills: ['Backend Development', 'API Integration', 'SQL', 'Node.js','MongoDB']
+        duration: 'December 2024 - Present',
+        description: "At Hypersage i contributed to building and optimizing scalable MERN applications, and Develop Backend Using Javascript and Python Frameworks increasing user engagement by 15%. Enhanced backend efficiency by 20% through optimized APIs. Improved DevOps workflows with Docker and Jenkins, achieving a 25% boost in deployment speed. Collaborated across departments in Agile sprints to enhance end-to-end application performance and deliver user-focused features.",
+        skills: ['MERN Stack', 'JavaScript', 'Node.js', 'MongoDB', 'React.js','Python','Django','FastApi','PostgreSQL','Redies','NestJs','Docker','Kubernetes']
     },
     {
         id: 2,
@@ -67,6 +59,7 @@ const Experience = () => {
     return (
         <section className="experience-container">
             <h2 className="section-title">Experience</h2>
+            
             <div className="experience-list">
                 {experienceData.map((exp) => (
                     <motion.div
@@ -87,6 +80,8 @@ const Experience = () => {
                                 ))}
                             </div>
                         </div>
+                        
+                        
                     </motion.div>
                 ))}
             </div>

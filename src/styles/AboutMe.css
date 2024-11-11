@@ -1,0 +1,93 @@
+/* Overall section container */
+.about-me-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 100%;
+    margin: 0;
+    gap: 40px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+  }
+  
+  /* About Me text container */
+  .about-me-text {
+    flex: 1;
+    text-align: left;
+    font-family: 'Poppins', 'Courier New', Courier, monospace;
+    max-width: 600px;
+  }
+  
+  /* Title Styling */
+  .about-me-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .about-me-title .about {
+    color: white;
+  }
+  
+  .about-me-title .me {
+    color: #f39c12;
+  }
+  
+  /* Description Styling */
+  .about-me-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    white-space: normal;
+  }
+  
+  /* Orange Highlight for Chinmaya Text */
+  .highlight-orange {
+    color: #f39c12; /* Orange color */
+  }
+  
+  /* Image Container Styling */
+  .about-me-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Styling */
+  .about-me-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners for image */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-me-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .about-me-title {
+      font-size: 2rem;
+    }
+  
+    .about-me-description {
+      font-size: 1rem;
+    }
+  
+    .about-me-image {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+  

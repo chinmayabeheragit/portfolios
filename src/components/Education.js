@@ -13,7 +13,7 @@ const educationData = [
     {
         id: 2,
         degree: 'BSCITM (Information Technology Management)',
-        institution: 'Utkal University',
+        institution: 'Utkal University, Bhubaneswar, India',
         duration: 'August 2018 - September 2021',
         description: '6.8 CGPA',
     },
