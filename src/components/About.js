@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
-import resume from '../assets/Chinmaya Behera Resume.pdf'; // Import resume PDF
+import resume from '../assets/Chinmaya_Behera_Resume.pdf'; // Import resume PDF
 import '../styles/About.css';
 
 function About() {
