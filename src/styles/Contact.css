@@ -3,42 +3,36 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* font-family: 'Poppins', sans-serif; */
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
+
 .contact-section {
   padding: 60px 20px;
-  /* background: linear-gradient(135deg, #4e7a7b, #6db7b2, #f0f4f7); */
   color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border-radius: 20px;
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styling */
-/* Title Styling */
 /* Title Styling */
 .contact-title {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  letter-spacing: 5.5px;
-  text-align: center; /* Ensures the text is centered */
-  width: 100%; /* Make the width 100% to take full space of its parent */
-  display: inline-block; /* Ensures title is treated as an inline block for proper centering */
-  margin-left: 0; /* Remove left margin */
-  margin-right: 0; /* Remove right margin */
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
 }
-
 
 /* Overall layout container for form and icons */
 .contact-container {
@@ -48,6 +42,7 @@ html, body {
   gap: 60px;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 40px;
 }
 
 /* Form Styling */
@@ -55,11 +50,11 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px; /* Ensures the form doesn't stretch too wide */
-  /* background: #131414; */
+  max-width: 500px;
+  background: #ffffff;
   padding: 30px;
   border-radius: 15px;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Input Styling */
@@ -77,13 +72,14 @@ html, body {
   border-radius: 30px;
   border: 1.5px solid #014f4c;
   background: #e4eaeb;
-  color: #000000;
-  font-size: 1.3rem;
+  color: #000;
+  font-size: 1.1rem;
   outline: none;
   transition: all 0.3s ease-in-out;
-  width: 100%; /* Set width to 100% of the container */
+  width: 100%;
 }
 
+/* Placeholder Styling */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #000000;
@@ -128,7 +124,7 @@ html, body {
 /* Social Icons */
 .social-icons {
   display: flex;
-  flex-direction: column; /* Stacks icons vertically */
+  flex-direction: column; /* Stack icons vertically by default */
   gap: 20px;
   align-items: center;
   margin-top: 40px;
@@ -163,11 +159,11 @@ html, body {
 .social-icon.leetcode:hover { background-color: #e67e22; }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .contact-title {
@@ -180,8 +176,38 @@ html, body {
   }
 
   .social-icons {
-    flex-direction: row; /* Stack icons horizontally on small screens */
-    gap: 35px;
-    margin-top: 20px; /* Space between form and social icons on mobile */
+    flex-direction: row; /* Stack icons horizontally on smaller screens */
+    gap: 25px;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%; /* Ensure icons are within the view */
+  }
+
+  .social-icon {
+    font-size: 2rem; /* Reduce icon size */
+    padding: 10px; /* Reduce padding to fit better */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    gap: 20px; /* Adjust spacing for very small screens */
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .social-icon {
+    font-size: 1.5rem; /* Even smaller icons on very small screens */
+    padding: 8px;
   }
 }

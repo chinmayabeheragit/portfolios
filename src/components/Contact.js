@@ -39,10 +39,10 @@ const FollowMe = () => {
           <a href="https://x.com/home?lang=en" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
             <FaTwitter />
           </a>
-          <a href="https://www.hackerrank.com/profile/chinmayabehera82" target="_blank" rel="noopener noreferrer" className="social-icon hackerrank">
+          <a href="https://www.hackerrank.com/chinmaya1" target="_blank" rel="noopener noreferrer" className="social-icon hackerrank">
             <SiHackerrank />
           </a>
-          <a href="https://leetcode.com/u/stark-07/" target="_blank" rel="noopener noreferrer" className="social-icon leetcode">
+          <a href="https://leetcode.com/chinmaya_behera/" target="_blank" rel="noopener noreferrer" className="social-icon leetcode">
             <SiLeetcode />
           </a>
         </div>
