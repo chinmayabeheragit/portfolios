@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from 'react';
 import About from '../components/About';
 import Project from '../components/Project';
@@ -8,10 +7,11 @@ import Skills from '../components/Skills';
 import Certification from '../components/Certification';
 import Contact from '../components/Contact';
 import AboutMe from '../components/AboutMe';
+import '../styles/Home.css'
 
 function Home() {
     return (
-        <div className="p-5">
+        <div className="home-wrapper">
             <section id="about" className="mt-8">
                 <About />
                 <AboutMe />

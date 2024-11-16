@@ -1,0 +1,7 @@
+/* Home page wrapper styles */
+.home-wrapper {
+    width: 100%;
+    overflow-x: hidden; /* Ensure no horizontal scrolling on the page */
+    margin: 0;
+    padding: 0;
+}

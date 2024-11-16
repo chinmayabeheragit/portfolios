@@ -15,14 +15,14 @@ function About() {
 
     return (
         <motion.section
-            className="about-section flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white"
+            className="about-section"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <div className="text-content text-center space-y-6">
+            <div className="text-content">
                 <motion.h2
-                    className="intro text-4xl font-bold"
+                    className="intro"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
@@ -31,7 +31,7 @@ function About() {
                 </motion.h2>
 
                 <motion.h3
-                    className="roles text-xl flex items-center justify-center space-x-2"
+                    className="roles"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
@@ -42,29 +42,29 @@ function About() {
 
                 {/* Button Group */}
                 <motion.div
-                    className="button-group flex flex-col sm:flex-row gap-4 justify-center"
+                    className="button-group"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
                 >
                     <motion.a
                         href={resume}
-                        className="rounded-button hire-me px-6 py-3 bg-indigo-600 text-white flex items-center justify-center rounded-lg shadow-lg transform transition-transform hover:scale-105"
+                        className="rounded-button hire-me"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Hire Me"
                     >
-                        <HiOutlinePaperAirplane className="mr-2" />
+                        <HiOutlinePaperAirplane className="icon" />
                         Hire Me
                     </motion.a>
                     <motion.a
                         href="https://github.com/chinmayabeheragit"
-                        className="rounded-button github px-6 py-3 bg-gray-700 text-white flex items-center justify-center rounded-lg shadow-lg transform transition-transform hover:scale-105"
+                        className="rounded-button github"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
                     >
-                        <FiGithub className="mr-2" />
+                        <FiGithub className="icon" />
                         GitHub
                     </motion.a>
                 </motion.div>
