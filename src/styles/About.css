@@ -6,9 +6,13 @@
     justify-content: center;
     min-height: 100vh;
     padding: 2rem;
-    background: linear-gradient(180deg, #1e293b, #0f172a);
+    background:
+                url('../assets/background.jpg');
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
     color: white;
-    background-image: url('../assets/background.jpeg');
 }
 
 .text-content {
@@ -75,6 +79,10 @@
 
 /* Responsive Design */
 @media (max-width: 640px) {
+    .about-section {
+        background-attachment: scroll; /* Fixes performance on mobile */
+    }
+
     .intro {
         font-size: 2rem;
     }
