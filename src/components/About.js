@@ -4,7 +4,6 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
 import resume from '../assets/Chinmaya_Behera_Resume.pdf';
-import backgroundVideo from '../assets/video1.mp4'; // Import your video
 import '../styles/About.css';
 
 function About() {
@@ -16,21 +15,12 @@ function About() {
 
     return (
         <motion.section
-            className="about-section relative flex flex-col items-center justify-center min-h-screen p-8 text-white"
+            className="about-section flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            {/* Background Video */}
-            <video
-                className="background-video absolute top-0 left-0 w-full h-full object-cover -z-10"
-                src={backgroundVideo}
-                autoPlay
-                loop
-                muted
-            />
-
-            <div className="text-content text-center space-y-6 relative z-10">
+            <div className="text-content text-center space-y-6">
                 <motion.h2
                     className="intro text-4xl font-bold"
                     initial={{ y: -20, opacity: 0 }}
