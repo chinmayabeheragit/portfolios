@@ -1,3 +1,4 @@
+// src/pages/Home.js
 import React from 'react';
 import About from '../components/About';
 import Project from '../components/Project';
@@ -7,7 +8,8 @@ import Skills from '../components/Skills';
 import Certification from '../components/Certification';
 import Contact from '../components/Contact';
 import AboutMe from '../components/AboutMe';
-import '../styles/Home.css'
+
+import '../styles/Home.css';  // Import the CSS file
 
 function Home() {
     return (
