@@ -30,7 +30,7 @@ const projects = [
     id: 3,
     title: "Task Management",
     description: "A web-based task management system that enables users to create, view, update, and delete tasks.",
-    techStack: "Django, PostgreSQL, React, JWT, AWS, Docker, CI/CD, NGinx",
+    techStack: "MERN, JWT, AWS, Docker, CI/CD",
     image: projectThreeImage,
     link: "https://github.com/chinmayabeheragit/task-management-system-py/tree/main/task_management",
   },

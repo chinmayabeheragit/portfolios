@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
-import resume from '../assets/Chinmaya_Behera_Resume.pdf';
+import resume from '../assets/Chinmaya Behera Full-Stack Developer.pdf';
 import '../styles/About.css';
 
 function About() {

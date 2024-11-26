@@ -1,93 +1,84 @@
-/* Overall section container */
+/* General Section Styling */
 .about-me-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 20px;
-    max-width: 100%;
-    margin: 0;
-    gap: 40px;
-    height: 100vh;
-    background-color: black;
-    color: white;
-  }
-  
-  /* About Me text container */
-  .about-me-text {
-    flex: 1;
-    text-align: left;
-    font-family: 'Poppins', 'Courier New', Courier, monospace;
-    max-width: 600px;
-  }
-  
-  /* Title Styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Decorative Gradient Circle */
+.about-me-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(243, 156, 18, 0.2);
+  z-index: 0;
+  top: -150px;
+  right: -150px;
+  filter: blur(80px);
+}
+
+/* Content Container */
+.about-me-content {
+  max-width: 800px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.about-me-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-me-title .highlight {
+  color: #f39c12;
+}
+
+.about-me-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #eaeaea;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .about-me-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    font-size: 2.5rem;
   }
-  
-  .about-me-title .about {
-    color: white;
-  }
-  
-  .about-me-title .me {
-    color: #f39c12;
-  }
-  
-  /* Description Styling */
+
   .about-me-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: white;
-    white-space: normal;
+    font-size: 1.1rem;
+    text-align: center;
   }
-  
-  /* Orange Highlight for Chinmaya Text */
-  .highlight-orange {
-    color: #f39c12; /* Orange color */
+}
+
+@media (max-width: 480px) {
+  .about-me-title {
+    font-size: 2rem;
   }
-  
-  /* Image Container Styling */
-  .about-me-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 300px;
-    max-height: 300px;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  .about-me-description {
+    font-size: 1rem;
   }
-  
-  /* Image Styling */
-  .about-me-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px; /* Rounded corners for image */
+
+  .about-me-section::before {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-me-section {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-  
-    .about-me-title {
-      font-size: 2rem;
-    }
-  
-    .about-me-description {
-      font-size: 1rem;
-    }
-  
-    .about-me-image {
-      max-width: 200px;
-      max-height: 200px;
-    }
-  }
-  
+}
