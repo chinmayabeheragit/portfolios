@@ -1,0 +1,67 @@
+.certification-container {
+    width: 100%;
+    padding: 100px 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #025247);
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.certificate-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.certificate-gallery.show {
+    opacity: 1;
+}
+
+.certificate {
+    width: 250px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate a {
+    text-decoration: none;
+}
+
+.certificate-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certificate:hover .certificate-img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.certificate:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}

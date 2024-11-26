@@ -1,0 +1,102 @@
+/* About.css */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background:
+                url('../assets/background.jpg');
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    color: white;
+}
+
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f3f4f6;
+}
+
+.intro .text-indigo-500 {
+    color: #6366f1;
+}
+
+.roles {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ee5f17;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.rounded-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.rounded-button.hire-me {
+    background-color: #6366f1;
+    color: white;
+}
+
+.rounded-button.github {
+    background-color: #374151;
+    color: white;
+}
+
+.rounded-button:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .about-section {
+        background-attachment: scroll; /* Fixes performance on mobile */
+    }
+
+    .intro {
+        font-size: 2rem;
+    }
+
+    .roles {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

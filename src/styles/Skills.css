@@ -1,0 +1,81 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #022d2a, #066656);
+}
+
+.skills-title {
+    font-size: 2.5em;
+    font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Skills Cloud Layout */
+.skills-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    padding: 10px;
+    background: transparent;  /* Removed the background box */
+    border-radius: 8px;
+    box-shadow: none;  /* Removed shadow */
+    transition: transform 0.3s ease;
+    animation: float 6s ease-in-out infinite; /* Floating animation */
+}
+
+/* Skill Logo */
+.skill-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    border-radius: 50%;  /* Circular logos */
+    transition: transform 0.3s ease;
+}
+
+.skill-logo:hover {
+    transform: rotate(360deg);  /* Add rotation on hover */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-item {
+        width: 100px;
+    }
+
+    .skill-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item {
+        width: 90px;
+    }
+
+    .skill-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
