@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Exposes the app on port 3000 for local testing
+    container_name: portfolio-client
