@@ -1,0 +1,9 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build files created by Docker or Netlify
+build/
+dist/
+
+# Ignore environment files
+.env
