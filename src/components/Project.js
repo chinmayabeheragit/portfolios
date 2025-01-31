@@ -1,9 +1,8 @@
-// Project.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Project.css';
 
-
+// Importing all project images
 import projectOneImage from "../assets/babyecom.jpg";
 import projectTwoImage from "../assets/bill.jpg";
 import projectThreeImage from "../assets/taskmanagement.avif";
@@ -71,7 +70,6 @@ const projects = [
   },
 ];
 
-
 const Project = () => {
   return (
     <section className="project-section">
@@ -100,7 +98,6 @@ const Project = () => {
                 </div>
                 <div className="project-info">
                   <h3 className="project-subtitle">{project.title}</h3>
-                  {/* <p className="project-tech-stack"><strong>Tech Stack:</strong> {project.techStack}</p> */}
                 </div>
               </div>
             </a>

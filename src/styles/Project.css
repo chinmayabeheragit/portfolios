@@ -1,249 +1,127 @@
-/* Global Styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f7fb;
-  scroll-behavior: smooth;
-}
-
-/* Project Section */
+/* General Styling for Project Section */
 .project-section {
-  padding: 80px 20px;
-  position: relative;
-  background-color: #f7f9fc;
-  background: linear-gradient(to bottom, #a6f1f3, #ffffff);
-  background-size: 400% 400%;
-  animation: gradientBackground 10s ease infinite;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.project-section::-webkit-scrollbar {
-  display: none;
-}
-
-@keyframes gradientBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Title Styling */
-.project-title {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1f2937, #3b82f6);
+  color: #ffffff;
   text-align: center;
-  font-size: 3rem;
-  font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 40px;
-  color: #333;
-  font-weight: 600;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  display: block;
-  position: relative;
-  z-index: 1;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.project-title::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 10%;
-  transform: translateX(-10%);
-  width: 0;
-  height: 4px;
-  background-color: #0e565a;
-  transition: width 0.3s ease;
-}
-
-.project-title:hover::after {
-  width: 100%;
-}
-
-/* Carousel Container */
 .carousel-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  padding-bottom: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  justify-items: center;
 }
 
-.carousel-container::-webkit-scrollbar {
-  height: 6px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 10px;
-}
-
-.carousel-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Individual Project Container */
 .project-container {
   position: relative;
-  flex: 0 0 auto;
-  width: 250px;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
-}
-
-.project-card a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
 }
 
 .project-image {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.project-image:hover {
-  transform: scale(1.1);
+  border-radius: 15px;
 }
 
 .project-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 1.5rem;
-  padding: 10px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .project-container:hover .project-overlay {
   opacity: 1;
 }
 
+.project-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .project-info {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
 }
 
 .project-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #03312e;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d1d5db;
 }
 
-.project-tech-stack {
-  font-size: 0.9rem;
-  color: #31b0b9;
-  font-style: italic;
+.project-link {
+  text-decoration: none;
 }
 
-/* Mobile Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .project-section {
+    padding: 30px 10px;
+  }
+
   .project-title {
     font-size: 2rem;
   }
 
   .carousel-container {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 10px;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .project-container {
-    flex-direction: column;
-    width: 280px;
-    height: auto;
-    scroll-snap-align: start;
-    margin-right: 10px; /* Adds spacing between project containers in mobile view */
-  }
-
-  .project-info {
-    padding: 10px;
-    display: none;
-  }
-
-  .project-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-  }
-
-  .project-tech-stack {
-    font-size: 0.8rem;
-  }
-
-  .project-overlay {
-    font-size: 1.2rem;
-    opacity: 0;
-  }
-
-  .project-card:hover .project-overlay {
-    opacity: 1;
-  }
-
-  .project-overlay .project-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
+  .project-image {
+    height: 180px;
   }
 }
 
-/* Desktop Styles (Hide project name on hover) */
-@media (min-width: 769px) {
-  .project-overlay {
-    display: none;
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1.8rem;
   }
 
-  .carousel-container {
-    justify-content: center;
+  .project-image {
+    height: 150px;
+  }
+
+  .project-name {
+    font-size: 1rem;
   }
 }

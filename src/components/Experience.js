@@ -7,7 +7,7 @@ const experienceData = [
         id: 1,
         jobTitle: 'SDE',
         company: 'Hypersage Technology | Bengaluru, Karnataka',
-        duration: 'December 2024 - Present',
+        duration: 'December 2023 - Present',
         description: "At Hypersage i contributed to building and optimizing scalable MERN applications, and Develop Backend Using Javascript and Python Frameworks increasing user engagement by 15%. Enhanced backend efficiency by 20% through optimized APIs. Improved DevOps workflows with Docker and Jenkins, achieving a 25% boost in deployment speed. Collaborated across departments in Agile sprints to enhance end-to-end application performance and deliver user-focused features.",
         skills: ['MERN Stack', 'JavaScript', 'Node.js', 'MongoDB', 'React.js','Python','Django','FastApi','PostgreSQL','Redies','NestJs','Docker','Kubernetes']
     },
